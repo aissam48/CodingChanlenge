@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">MostStarredGithub</string>
+    <string name="repos_name">Repos name</string>
+    <string name="repos_description">Repos Description</string>
+    <string name="repos_owner_name">repos owner name</string>
 </resources>
