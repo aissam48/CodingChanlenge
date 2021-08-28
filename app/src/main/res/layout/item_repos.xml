@@ -3,7 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:layout_marginBottom="2sp"
+    >
 
     <TextView
         android:id="@+id/repos_name"
@@ -25,6 +27,7 @@
         app:layout_constraintStart_toStartOf="@id/repos_name"
         app:layout_constraintTop_toBottomOf="@id/repos_name"
         app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/black"
         android:layout_marginEnd="15sp"
         android:textAlignment="textStart"
         android:layout_marginTop="10sp"
@@ -52,6 +55,7 @@
         app:layout_constraintTop_toTopOf="@id/repos_image"
         app:layout_constraintBottom_toBottomOf="@id/repos_image"
         android:layout_marginStart="10sp"
+        android:textColor="@color/black"
         android:text="@string/repos_owner_name"
         android:textSize="14sp"
         />

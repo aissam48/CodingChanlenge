@@ -1,4 +1,4 @@
-package com.stories.moststarredgithub
+package com.stories.moststarredgithub.PackageModulData
 
 data class License(
     val key: String,
