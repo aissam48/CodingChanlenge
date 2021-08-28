@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/grey"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -45,6 +46,16 @@
         tools:listitem="@layout/item_repos"
         />
 
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/recycler"
+        app:layout_constraintEnd_toEndOf="@id/recycler"
+        app:layout_constraintBottom_toBottomOf="@id/recycler"
+        android:layout_marginBottom="5sp"
+        />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bottom_trend_or_all_repos"
         android:layout_width="match_parent"
@@ -76,6 +87,7 @@
             android:layout_marginBottom="5sp"
             android:layout_marginTop="2sp"
             android:textSize="17sp"
+            android:textColor="@color/black"
             />
 
         <ImageView
@@ -99,6 +111,7 @@
             android:textSize="17sp"
             android:layout_marginBottom="5sp"
             android:layout_marginTop="2sp"
+            android:textColor="@color/black"
             android:text="Trending"
             />
 

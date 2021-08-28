@@ -1,11 +1,13 @@
 package com.stories.moststarredgithub
 
+import android.content.Context
+import android.widget.Toast
 import com.squareup.picasso.Picasso
 import com.xwray.groupie.kotlinandroidextensions.GroupieViewHolder
 import com.xwray.groupie.kotlinandroidextensions.Item
 import kotlinx.android.synthetic.main.item_repos.*
 
-class GroupieAdapter(val item: com.stories.moststarredgithub.PackageModulData.Item):Item() {
+class GroupieAdapter(val item: com.stories.moststarredgithub.PackageModulData.Item, val context:Context):Item() {
     override fun bind(viewHolder: GroupieViewHolder, position: Int) {
 
         viewHolder.repos_name.text = item.name
@@ -14,6 +16,10 @@ class GroupieAdapter(val item: com.stories.moststarredgithub.PackageModulData.It
 
         viewHolder.number_of_stars.text = item.stargazers_count.toString()
         Picasso.get().load(item.owner.avatar_url).into(viewHolder.repos_image)
+
+        viewHolder.itemView.setOnClickListener {
+            Toast.makeText(context, item.created_at, Toast.LENGTH_SHORT).show()
+        }
 
     }
 
